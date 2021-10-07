@@ -116,7 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="models\keys.txt" />
-    <Content Include="videos\jose.mp4" />
     <None Include="Resources\extension_avi.png" />
     <None Include="Resources\extension_flv.png" />
     <None Include="Resources\extension_mp4.png" />

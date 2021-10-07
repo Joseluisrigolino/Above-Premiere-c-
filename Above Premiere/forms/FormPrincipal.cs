@@ -25,10 +25,11 @@ namespace Above_Premiere.forms
         private void btn_change_resolution_Click(object sender, EventArgs e)
         {
             ProcessStartInfo ps = new ProcessStartInfo();
-            ps.FileName = "cmd.exe";
-            ps.WindowStyle = ProcessWindowStyle.Normal;
-            ps.Arguments = @"/C C:\Users\HP\Desktop\prueba.mp4";
+            ps.FileName = @"C:\Users\HP\Desktop\Davinci\Cuatrimestre 4\Plataformas de desarrollo\ffmpeg\bin\ffmpeg.exe";
+            //ps.WindowStyle = ProcessWindowStyle.Hidden;
+            ps.Arguments = @"-i C:\Users\HP\Desktop\prueba.mp4 C:\Users\HP\Desktop\prueba.avi";
             Process.Start(ps);
+            //Process.Start("C:\\Windows\\System32\\cmd.exe", "/c");
             /*startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = CONSOLA;
             startInfo.Arguments = "/C ffmpeg -i input.avi -vf scale = 320: 240 output.avi";
