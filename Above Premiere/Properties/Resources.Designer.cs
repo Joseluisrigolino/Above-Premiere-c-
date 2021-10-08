@@ -83,6 +83,16 @@ namespace Above_Premiere.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap change_format_button {
+            get {
+                object obj = ResourceManager.GetObject("change-format-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap change_resolution {
             get {
                 object obj = ResourceManager.GetObject("change-resolution", resourceCulture);

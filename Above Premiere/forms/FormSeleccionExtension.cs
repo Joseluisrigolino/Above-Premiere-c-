@@ -61,12 +61,12 @@ namespace Above_Premiere.forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            String format = getExtension();
-            /*
-             Logica para cambiar de formato
-             */
-
-            this.close();
+            this.Hide();
         }
+
+
+
+
     }
 }
+

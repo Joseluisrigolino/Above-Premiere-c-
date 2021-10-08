@@ -124,6 +124,7 @@
     <None Include="Resources\extensions_flv.png" />
     <None Include="Resources\extensions_mp4.png" />
     <None Include="Resources\extensions_mpeg.png" />
+    <None Include="Resources\change-format-button.png" />
     <Content Include="Resources\video-mute.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

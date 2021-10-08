@@ -30,6 +30,7 @@ namespace Above_Premiere.forms
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_input_video = new System.Windows.Forms.Button();
             this.btn_extract_image_frame = new System.Windows.Forms.Button();
             this.btn_extract_audio = new System.Windows.Forms.Button();
@@ -37,7 +38,9 @@ namespace Above_Premiere.forms
             this.btn_download_mp3 = new System.Windows.Forms.Button();
             this.btn_change_format = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_extension = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -47,6 +50,14 @@ namespace Above_Premiere.forms
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(194, 157);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(160, 20);
+            this.textBox1.TabIndex = 8;
             // 
             // btn_input_video
             // 
@@ -132,13 +143,33 @@ namespace Above_Premiere.forms
             this.button7.TabIndex = 7;
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txt_extension
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(194, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 8;
+            this.txt_extension.Location = new System.Drawing.Point(34, 43);
+            this.txt_extension.Name = "txt_extension";
+            this.txt_extension.Size = new System.Drawing.Size(54, 20);
+            this.txt_extension.TabIndex = 9;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.richTextBox1.ForeColor = System.Drawing.Color.Snow;
+            this.richTextBox1.Location = new System.Drawing.Point(34, 260);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(273, 39);
+            this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.Text = "Recuerde que cada accion y cambio que usted haga\npuede llegar a demorar un buen t" +
+    "iempo";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.4F);
+            this.textBox2.Location = new System.Drawing.Point(94, 43);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(61, 19);
+            this.textBox2.TabIndex = 11;
+            this.textBox2.Text = "1920:1080";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // FormPrincipal
             // 
@@ -146,6 +177,9 @@ namespace Above_Premiere.forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(366, 311);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txt_extension);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.btn_input_video);
@@ -171,7 +205,10 @@ namespace Above_Premiere.forms
         private System.Windows.Forms.Button btn_extract_image_frame;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_input_video;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox txt_extension;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
