@@ -71,7 +71,7 @@ namespace Above_Premiere.forms
                         Console.WriteLine(output + " escala");
                         ProcessStartInfo ps = new ProcessStartInfo();
                         ps.FileName = FFMPEG;
-                        ps.Arguments = "-i " + path + " -vf scale =" + output + " outputmodificado.mp4";
+                        ps.Arguments = " -i " + path + " -vf scale=" + output + "archivo_modificado.mp4";
                         Process.Start(ps);
 
                     }
@@ -98,7 +98,7 @@ namespace Above_Premiere.forms
 
             String path = textBox1.Text;
 
-            if (string.IsNullOrEmpty(path))
+            if (!string.IsNullOrEmpty(path))
             {
                 try
                 {
@@ -138,7 +138,7 @@ namespace Above_Premiere.forms
                     Console.WriteLine(forderPath);
                     ProcessStartInfo ps = new ProcessStartInfo();
                     ps.FileName = FFMPEG;
-                    ps.Arguments = "-i "+ path + " - c copy - an output.mp4";
+                    ps.Arguments = "-i " + path + " - c copy - an " + forderPath + "\\output.mp4";
                     Process.Start(ps);
 
                 }
