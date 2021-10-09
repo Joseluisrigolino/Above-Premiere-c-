@@ -35,6 +35,7 @@ namespace Above_Premiere.forms
                         Console.WriteLine(output + " extension");
                         ProcessStartInfo ps = new ProcessStartInfo();
                         ps.FileName = FFMPEG;
+                        ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                         ps.Arguments = @"-i " + path + " " + folderPath + "\\output." + output;
                         Process.Start(ps);
 
@@ -71,7 +72,8 @@ namespace Above_Premiere.forms
                         Console.WriteLine(output + " escala");
                         ProcessStartInfo ps = new ProcessStartInfo();
                         ps.FileName = FFMPEG;
-                        ps.Arguments = " -i " + path + " -vf scale=" + output + "archivo_modificado.mp4";
+                        ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                        ps.Arguments = "-i " + path + " -vf scale=" + output + " " + folderPath + @"\archivo_modificado.mp4";
                         Process.Start(ps);
 
                     }
@@ -107,6 +109,7 @@ namespace Above_Premiere.forms
                     Console.WriteLine(forderPath);
                     ProcessStartInfo ps = new ProcessStartInfo();
                     ps.FileName = FFMPEG;
+                    ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     ps.Arguments = @"-i " + path + " " + forderPath + "\\output.mp3";
                     Process.Start(ps);
 
@@ -133,14 +136,13 @@ namespace Above_Premiere.forms
             {
                 try
                 {
-
                     String forderPath = getFolderPath();
                     Console.WriteLine(forderPath);
                     ProcessStartInfo ps = new ProcessStartInfo();
                     ps.FileName = FFMPEG;
-                    ps.Arguments = "-i " + path + " - c copy - an " + forderPath + "\\output.mp4";
+                    ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    ps.Arguments = "-i " + path + " -an -vcodec copy " + forderPath + @"\output.mp4";
                     Process.Start(ps);
-
                 }
                 catch (Exception ex)
                 {
@@ -156,11 +158,43 @@ namespace Above_Premiere.forms
 
         private void btn_extract_image_frame_Click(object sender, EventArgs e)
         {
-            /*
-            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            startInfo.FileName = CONSOLA;
-            startInfo.Arguments = "/C copy /b Image1.jpg + Archive.rar Image2.jpg";
-            */
+            String path = textBox1.Text;
+            String seconds = textBox3.Text;
+            if (!string.IsNullOrEmpty(seconds))
+            {
+                if (!string.IsNullOrEmpty(path))
+                {
+                    try
+                    {
+                        MessageBox.Show("Seleccionar una carpeta en donde las imagenes se crearan, o cree una y seleccionela",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        String folderPath = getFolderPath();
+                        ProcessStartInfo ps = new ProcessStartInfo();
+                        ps.FileName = FFMPEG;
+                        ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                        ps.Arguments = "-i " + path + " -vf fps=fps=" + seconds + " " + folderPath + @"\captura-%d.png";
+                        Process.Start(ps);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debes elegir un archivo al que cambiar resolucion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe escribir aqui a la izquierda cada cuanto segundos elegir un frame", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+            //ffmpeg -i mivideo.webm -vf fps=fps=1 captura-%d.png
         }
 
         private void btn_input_video_Click(object sender, EventArgs e)
@@ -172,6 +206,10 @@ namespace Above_Premiere.forms
 
                     textBox1.Text = fd.FileName;
 
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar algun archivo de video al que modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

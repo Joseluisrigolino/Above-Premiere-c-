@@ -41,6 +41,7 @@ namespace Above_Premiere.forms
             this.txt_extension = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -171,12 +172,20 @@ namespace Above_Premiere.forms
             this.textBox2.Text = "1920:1080";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(33, 214);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(20, 20);
+            this.textBox3.TabIndex = 12;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(366, 311);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.txt_extension);
@@ -210,5 +219,6 @@ namespace Above_Premiere.forms
         private System.Windows.Forms.TextBox txt_extension;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
