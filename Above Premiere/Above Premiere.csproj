@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controllers\inicioController.cs" />
     <Compile Include="forms\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,9 +89,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\video\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\user.png" />
     <None Include="Resources\question-mark.png" />
