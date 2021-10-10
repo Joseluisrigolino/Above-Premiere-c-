@@ -88,7 +88,7 @@ namespace Above_Premiere.forms
             this.textBox2.Size = new System.Drawing.Size(61, 19);
             this.textBox2.TabIndex = 11;
             this.textBox2.Text = "1920:1080";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
+
             // 
             // textBox3
             // 
@@ -96,6 +96,7 @@ namespace Above_Premiere.forms
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(20, 20);
             this.textBox3.TabIndex = 12;
+            this.textBox3.Text = "1";
             // 
             // button7
             // 

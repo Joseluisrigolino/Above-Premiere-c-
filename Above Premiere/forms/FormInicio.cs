@@ -35,7 +35,6 @@ namespace Above_Premiere
             }
             else
             {
-
                 if (leerArchivos().Contains(key)) //Verifica si la key ingresada en el form existe dentro del txt keys
                 {
                     FormPrincipal fp = new FormPrincipal();
@@ -46,11 +45,7 @@ namespace Above_Premiere
                 {
                     MessageBox.Show("Key inexistente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
             }
-
-
         }
 
         private String[] leerArchivos() //Devuelve un array con todos las llaves del "keys.txt"

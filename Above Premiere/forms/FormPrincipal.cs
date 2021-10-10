@@ -17,25 +17,25 @@ namespace Above_Premiere.forms
         private string FFMPEG = @"C:\Users\HP\Desktop\Davinci\Cuatrimestre 4\Plataformas de desarrollo\ffmpeg\bin\ffmpeg.exe";
 
 
-        private void btn_change_format_Click(object sender, EventArgs e)
+        private void btn_change_format_Click(object sender, EventArgs e) //Boton para cambiar el formato del video
         {
 
-            String path = textBox1.Text;
-            String output = txt_extension.Text;
-            Console.WriteLine(output + " extension");
-            if (!string.IsNullOrEmpty(output))
+            String path = textBox1.Text; //Url local del video
+            String extension = txt_extension.Text; //Extension a la que se le va a cambiar
+
+            Console.WriteLine(extension + " extension");
+            if (!string.IsNullOrEmpty(extension)) //Verifica si no esta vacio ni es nulo el valor de extension
             {
-                if (!string.IsNullOrEmpty(path))
+                if (!string.IsNullOrEmpty(path)) //Verifica si no esta vacion ni es nulo la url local del video
                 {
                     try
                     {
 
-                        String folderPath = getFolderPath();
-                        Console.WriteLine(output + " extension");
+                        String folderPath = getFolderPath(); //Obtiene la url local de la carpeta donde se va a guardar el arhivo nuevo
                         ProcessStartInfo ps = new ProcessStartInfo();
                         ps.FileName = FFMPEG;
                         ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                        ps.Arguments = @"-i " + path + " " + folderPath + "\\output." + output;
+                        ps.Arguments = @"-i " + path + " " + folderPath + "\\output." + extension; //Comando donde se cambia la extension del archivo
                         Process.Start(ps);
 
                     }
@@ -56,23 +56,22 @@ namespace Above_Premiere.forms
             }
         }
 
-        private void btn_change_resolution_Click(object sender, EventArgs e)
+        private void btn_change_resolution_Click(object sender, EventArgs e) //Boton para cambiar la resolucion del video
         {
-            String path = textBox1.Text;
-            String output = textBox2.Text;
-            if (!string.IsNullOrEmpty(output))
+            String path = textBox1.Text; //Url local del video
+            String resolution = textBox2.Text; //Resolucion a la que se le va a cambiar
+            if (!string.IsNullOrEmpty(resolution))
             {
-                if (!string.IsNullOrEmpty(path))
+                if (!string.IsNullOrEmpty(path)) //Verifica si no esta vacion ni es nulo la url local del video
                 {
                     try
                     {
 
-                        String folderPath = getFolderPath();
-                        Console.WriteLine(output + " escala");
+                        String folderPath = getFolderPath(); //Obtiene la url local de la carpeta donde se va a guardar el arhivo nuevo
                         ProcessStartInfo ps = new ProcessStartInfo();
                         ps.FileName = FFMPEG;
                         ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                        ps.Arguments = "-i " + path + " -vf scale=" + output + " " + folderPath + @"\archivo_modificado.mp4";
+                        ps.Arguments = "-i " + path + " -vf scale=" + resolution + " " + folderPath + @"\archivo_modificado.mp4"; //Comando donde se cambia la resolucion del archivo
                         Process.Start(ps);
 
                     }
@@ -97,19 +96,19 @@ namespace Above_Premiere.forms
         private void btn_download_mp3_Click(object sender, EventArgs e)
         {
 
-            String path = textBox1.Text;
+            String path = textBox1.Text; //Url local del video
 
-            if (!string.IsNullOrEmpty(path))
+            if (!string.IsNullOrEmpty(path)) //Verifica si no esta vacion ni es nulo la url local del video
             {
                 try
                 {
 
-                    String forderPath = getFolderPath();
+                    String forderPath = getFolderPath(); //Obtiene la url local de la carpeta donde se va a guardar el arhivo nuevo
                     Console.WriteLine(forderPath);
                     ProcessStartInfo ps = new ProcessStartInfo();
                     ps.FileName = FFMPEG;
                     ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                    ps.Arguments = @"-i " + path + " " + forderPath + "\\output.mp3";
+                    ps.Arguments = @"-i " + path + " " + forderPath + "\\output.mp3"; //Comando donde se cambia a mp3 el archivo
                     Process.Start(ps);
 
                 }
@@ -129,19 +128,19 @@ namespace Above_Premiere.forms
 
         private void btn_extract_audio_Click(object sender, EventArgs e)
         {
-            String path = textBox1.Text;
+            String path = textBox1.Text; //Url local del video
 
-            if (!string.IsNullOrEmpty(path))
+            if (!string.IsNullOrEmpty(path)) //Verifica si no esta vacio ni es nulo la url local del video
             {
                 try
                 {
-                    String forderPath = getFolderPath();
+                    String forderPath = getFolderPath(); //Obtiene la url local de la carpeta donde se va a guardar el arhivo nuevo
                     Console.WriteLine(forderPath);
                     ProcessStartInfo ps = new ProcessStartInfo();
                     ps.FileName = FFMPEG;
                     ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                    ps.Arguments = "-i " + path + " -an -vcodec copy " + forderPath + @"\output.mp4";
-                    Process.Start(ps);
+                    ps.Arguments = "-i " + path + " -an -vcodec copy " + forderPath + @"\output.mp4"; //Comando donde se mutea el archivo
+                    Process.Start(ps); //Empieza el ingreso de comandos en la consola
                 }
                 catch (Exception ex)
                 {
@@ -157,11 +156,12 @@ namespace Above_Premiere.forms
 
         private void btn_extract_image_frame_Click(object sender, EventArgs e)
         {
-            String path = textBox1.Text;
-            String seconds = textBox3.Text;
-            if (!string.IsNullOrEmpty(seconds))
+            String path = textBox1.Text; //Url local del video
+            String seconds = textBox3.Text; //Segundos donde se toma cada frame del archivo
+
+            if (!string.IsNullOrEmpty(seconds)) //Verifica si no esta vacio ni es nulo los segundos dentro del form
             {
-                if (!string.IsNullOrEmpty(path))
+                if (!string.IsNullOrEmpty(path)) //Verifica si no esta vacio ni es nulo la url local del video
                 {
                     try
                     {
@@ -171,8 +171,8 @@ namespace Above_Premiere.forms
                         ProcessStartInfo ps = new ProcessStartInfo();
                         ps.FileName = FFMPEG;
                         ps.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                        ps.Arguments = "-i " + path + " -vf fps=fps=" + seconds + " " + folderPath + @"\captura-%d.png";
-                        Process.Start(ps);
+                        ps.Arguments = "-i " + path + " -vf fps=fps=" + seconds + " " + folderPath + @"\captura-%d.png"; //Comando donde se extraen las imagenes por cada X frames
+                        Process.Start(ps); //Empieza el ingreso de comandos en la consola
 
                     }
                     catch (Exception ex)
@@ -193,9 +193,9 @@ namespace Above_Premiere.forms
 
         }
 
-        private void btn_input_video_Click(object sender, EventArgs e)
+        private void btn_input_video_Click(object sender, EventArgs e) //Ingreso del video a formatear
         {
-            using (var fd = new OpenFileDialog())
+            using (var fd = new OpenFileDialog()) //Funcion para abrir archivos y seleccionar video
             {
                 if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK && !string.IsNullOrWhiteSpace(fd.FileName))
                 {
@@ -210,12 +210,8 @@ namespace Above_Premiere.forms
             }
         }
 
-        public String archivo_path()
-        {
-            return textBox1.Text;
-        }
 
-        private String getFolderPath()
+        private String getFolderPath() //Funcion para seleccionar donde guardar los archivos nuevos
         {
             String pathFolderName = "";
             FolderBrowserDialog ofd = new FolderBrowserDialog();
@@ -228,29 +224,6 @@ namespace Above_Premiere.forms
             }
             return pathFolderName;
         }
-
-        private void btn_extension_Click(object sender, EventArgs e)
-        {
-            FormSeleccionExtension fse = new FormSeleccionExtension();
-            fse.Show();
-            String extension = fse.getExtension();
-            this.txt_extension.Text = extension;
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
     }
 
 
