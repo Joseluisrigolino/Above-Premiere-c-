@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\FormAyudaInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormAyudaInicio.Designer.cs">
+      <DependentUpon>FormAyudaInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormAyudaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormAyudaPrincipal.Designer.cs">
+      <DependentUpon>FormAyudaPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\FormAyudaInicio.resx">
+      <DependentUpon>FormAyudaInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormAyudaPrincipal.resx">
+      <DependentUpon>FormAyudaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +131,9 @@
     <None Include="Resources\extensions_mp4.png" />
     <None Include="Resources\extensions_mpeg.png" />
     <None Include="Resources\change-format-button.png" />
+    <None Include="Resources\formInicioAyuda.png" />
+    <None Include="Resources\formInicioAyuda1.png" />
+    <None Include="Resources\formPrincipalAyuda.png" />
     <Content Include="Resources\video-mute.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

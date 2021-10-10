@@ -88,7 +88,6 @@ namespace Above_Premiere.forms
             this.textBox2.Size = new System.Drawing.Size(61, 19);
             this.textBox2.TabIndex = 11;
             this.textBox2.Text = "1920:1080";
-
             // 
             // textBox3
             // 
@@ -107,6 +106,7 @@ namespace Above_Premiere.forms
             this.button7.Size = new System.Drawing.Size(41, 39);
             this.button7.TabIndex = 7;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // btn_input_video
             // 

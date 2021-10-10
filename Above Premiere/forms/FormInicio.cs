@@ -64,6 +64,9 @@ namespace Above_Premiere
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            FormAyudaInicio fai = new FormAyudaInicio();
+            fai.Show();
             /*----------------------------------------------------------------------------------
               Este boton mostrara una imagen donde vera que sirve cada boton y espacio del form
             ------------------------------------------------------------------------------------*/

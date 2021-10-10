@@ -136,11 +136,14 @@
   <data name="extensions_mp4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\extensions_mp4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="change-resolution" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\change-resolution.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="video-mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\video-mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formInicioAyuda1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formInicioAyuda1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="insert-video" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insert-video.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="change-format" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\change-format.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,6 +160,9 @@
   <data name="extensions_flv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\extensions_flv.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="formInicioAyuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formInicioAyuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="image-frame" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image-frame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,8 +172,8 @@
   <data name="extensions_avi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\extensions_avi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="insert-video" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\insert-video.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="change-resolution" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\change-resolution.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="extensions_mpeg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\extensions_mpeg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -177,5 +183,8 @@
   </data>
   <data name="change-format-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\change-format-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formPrincipalAyuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formPrincipalAyuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

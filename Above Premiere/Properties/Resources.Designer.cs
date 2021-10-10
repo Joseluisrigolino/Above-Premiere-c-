@@ -193,6 +193,36 @@ namespace Above_Premiere.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap formInicioAyuda {
+            get {
+                object obj = ResourceManager.GetObject("formInicioAyuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formInicioAyuda1 {
+            get {
+                object obj = ResourceManager.GetObject("formInicioAyuda1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formPrincipalAyuda {
+            get {
+                object obj = ResourceManager.GetObject("formPrincipalAyuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_frame {
             get {
                 object obj = ResourceManager.GetObject("image-frame", resourceCulture);

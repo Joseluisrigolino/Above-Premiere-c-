@@ -224,6 +224,12 @@ namespace Above_Premiere.forms
             }
             return pathFolderName;
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FormAyudaPrincipal fap = new FormAyudaPrincipal();
+            fap.Show();
+        }
     }
 
 
