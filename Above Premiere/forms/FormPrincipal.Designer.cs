@@ -29,19 +29,20 @@ namespace Above_Premiere.forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_extension = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.btn_input_video = new System.Windows.Forms.Button();
             this.btn_extract_image_frame = new System.Windows.Forms.Button();
             this.btn_extract_audio = new System.Windows.Forms.Button();
             this.btn_change_resolution = new System.Windows.Forms.Button();
             this.btn_download_mp3 = new System.Windows.Forms.Button();
             this.btn_change_format = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.txt_extension = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -59,6 +60,52 @@ namespace Above_Premiere.forms
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(160, 20);
             this.textBox1.TabIndex = 8;
+            // 
+            // txt_extension
+            // 
+            this.txt_extension.Location = new System.Drawing.Point(34, 43);
+            this.txt_extension.Name = "txt_extension";
+            this.txt_extension.Size = new System.Drawing.Size(54, 20);
+            this.txt_extension.TabIndex = 9;
+            this.txt_extension.Text = "avi";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.richTextBox1.ForeColor = System.Drawing.Color.Snow;
+            this.richTextBox1.Location = new System.Drawing.Point(34, 260);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(273, 39);
+            this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.Text = "Recuerde que cada accion y cambio que usted haga\npuede llegar a demorar un buen t" +
+    "iempo";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.4F);
+            this.textBox2.Location = new System.Drawing.Point(94, 43);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(61, 19);
+            this.textBox2.TabIndex = 11;
+            this.textBox2.Text = "1920:1080";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(33, 214);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(20, 20);
+            this.textBox3.TabIndex = 12;
+            // 
+            // button7
+            // 
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Image = global::Above_Premiere.Properties.Resources.question_mark;
+            this.button7.Location = new System.Drawing.Point(313, 260);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(41, 39);
+            this.button7.TabIndex = 7;
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // btn_input_video
             // 
@@ -134,51 +181,6 @@ namespace Above_Premiere.forms
             this.btn_change_format.UseVisualStyleBackColor = false;
             this.btn_change_format.Click += new System.EventHandler(this.btn_change_format_Click);
             // 
-            // button7
-            // 
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Image = global::Above_Premiere.Properties.Resources.question_mark;
-            this.button7.Location = new System.Drawing.Point(313, 260);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(41, 39);
-            this.button7.TabIndex = 7;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // txt_extension
-            // 
-            this.txt_extension.Location = new System.Drawing.Point(34, 43);
-            this.txt_extension.Name = "txt_extension";
-            this.txt_extension.Size = new System.Drawing.Size(54, 20);
-            this.txt_extension.TabIndex = 9;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.richTextBox1.ForeColor = System.Drawing.Color.Snow;
-            this.richTextBox1.Location = new System.Drawing.Point(34, 260);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(273, 39);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "Recuerde que cada accion y cambio que usted haga\npuede llegar a demorar un buen t" +
-    "iempo";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.4F);
-            this.textBox2.Location = new System.Drawing.Point(94, 43);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(61, 19);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.Text = "1920:1080";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(33, 214);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(20, 20);
-            this.textBox3.TabIndex = 12;
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +200,7 @@ namespace Above_Premiere.forms
             this.Controls.Add(this.btn_change_resolution);
             this.Controls.Add(this.btn_download_mp3);
             this.Controls.Add(this.btn_change_format);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.ResumeLayout(false);

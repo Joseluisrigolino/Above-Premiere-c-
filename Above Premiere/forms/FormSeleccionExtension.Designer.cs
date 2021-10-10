@@ -29,6 +29,7 @@ namespace Above_Premiere.forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSeleccionExtension));
             this.label1 = new System.Windows.Forms.Label();
             this.extension_text = new System.Windows.Forms.TextBox();
             this.extension_mp4 = new System.Windows.Forms.Button();
@@ -120,6 +121,7 @@ namespace Above_Premiere.forms
             this.Controls.Add(this.extension_mpeg);
             this.Controls.Add(this.extension_text);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSeleccionExtension";
             this.Text = " ";
             this.ResumeLayout(false);

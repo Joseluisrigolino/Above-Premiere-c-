@@ -20,7 +20,6 @@ namespace Above_Premiere.forms
         private void btn_change_format_Click(object sender, EventArgs e)
         {
 
-
             String path = textBox1.Text;
             String output = txt_extension.Text;
             Console.WriteLine(output + " extension");
@@ -192,9 +191,6 @@ namespace Above_Premiere.forms
                 MessageBox.Show("Debe escribir aqui a la izquierda cada cuanto segundos elegir un frame", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-
-
-            //ffmpeg -i mivideo.webm -vf fps=fps=1 captura-%d.png
         }
 
         private void btn_input_video_Click(object sender, EventArgs e)
@@ -251,6 +247,10 @@ namespace Above_Premiere.forms
         {
 
         }
+
+
+
+
     }
 
 
