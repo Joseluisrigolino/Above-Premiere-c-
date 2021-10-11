@@ -30,7 +30,8 @@ namespace Above_Premiere.forms
                 {
                     try
                     {
-
+                        MessageBox.Show("Seleccionar una carpeta en donde se guardara el video con extension: " + extension,
+                            "Seleccionar carpeta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         String folderPath = getFolderPath(); //Obtiene la url local de la carpeta donde se va a guardar el arhivo nuevo
                         ProcessStartInfo ps = new ProcessStartInfo();
                         ps.FileName = FFMPEG;
@@ -66,7 +67,8 @@ namespace Above_Premiere.forms
                 {
                     try
                     {
-
+                        MessageBox.Show("Seleccionar una carpeta en donde se guardara el video con resolucion: "+resolution,
+                            "Seleccionar carpeta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         String folderPath = getFolderPath(); //Obtiene la url local de la carpeta donde se va a guardar el arhivo nuevo
                         ProcessStartInfo ps = new ProcessStartInfo();
                         ps.FileName = FFMPEG;
@@ -102,7 +104,8 @@ namespace Above_Premiere.forms
             {
                 try
                 {
-
+                    MessageBox.Show("Seleccionar una carpeta en donde se guardara el archivo .mp3",
+                            "Seleccionar carpeta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     String forderPath = getFolderPath(); //Obtiene la url local de la carpeta donde se va a guardar el arhivo nuevo
                     Console.WriteLine(forderPath);
                     ProcessStartInfo ps = new ProcessStartInfo();
@@ -134,6 +137,8 @@ namespace Above_Premiere.forms
             {
                 try
                 {
+                    MessageBox.Show("Seleccionar una carpeta en donde se guardara el video sin audio",
+                            "Seleccionar carpeta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     String forderPath = getFolderPath(); //Obtiene la url local de la carpeta donde se va a guardar el arhivo nuevo
                     Console.WriteLine(forderPath);
                     ProcessStartInfo ps = new ProcessStartInfo();
@@ -166,7 +171,7 @@ namespace Above_Premiere.forms
                     try
                     {
                         MessageBox.Show("Seleccionar una carpeta en donde las imagenes se crearan, o cree una y seleccionela",
-                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            "Seleccionar carpeta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         String folderPath = getFolderPath();
                         ProcessStartInfo ps = new ProcessStartInfo();
                         ps.FileName = FFMPEG;
